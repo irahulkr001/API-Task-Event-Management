@@ -12,7 +12,7 @@ from app.models import EventModel
 
 
 class EventListView(APIView):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     def get(self, request):
         events = EventModel.objects.all()
         stu = EventSerializer(events, many=True)

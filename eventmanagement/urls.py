@@ -28,5 +28,5 @@ urlpatterns = [
 path('login/', obtain_auth_token),
     path('eventdetilview/<int:pk>/',views.EventDetailView.as_view()),
     path('', include(router.urls)),
-    path('logout', LogoutView.as_view()),
+    path('logout', views.Logout.as_view()),
 ]
